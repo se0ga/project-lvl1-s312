@@ -1,15 +1,19 @@
 {
-    "name": "se0ga/brain-games",
-    "bin": ["bin/brain-games"],
-    "description": "First project on hexlet.com",
-    "type": "library",
-    "authors": [
-        {
-            "name": "Sergei Iakovlev",
-            "email": "se0ga@yandex.ru"
-        }
-    ],
-    "require": {
-        "php":">=7.0.0"
+  "name": "se0ga/brain-games",
+  "bin": ["bin/brain-games"],
+  "description": "First project on hexlet.com",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Sergei Iakovlev",
+      "email": "se0ga@yandex.ru"
     }
+  ],
+  "autoload": {
+    "files": ["src/Cli.php"]
+  },
+  "require": {
+    "php":">=7.0.0",
+    "wp-cli/php-cli-tools": "^0.11.9"
+  }
 }
