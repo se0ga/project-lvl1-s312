@@ -2,7 +2,8 @@
   "name": "se0ga/brain-games",
   "bin": ["bin/brain-games"],
   "description": "First project on hexlet.com",
-  "type": "library",
+  "type": "project",
+  "keywords": ["hexlet", ""brain-games"], 
   "authors": [
     {
       "name": "Sergei Iakovlev",
