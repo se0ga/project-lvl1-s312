@@ -3,18 +3,24 @@
   "bin": ["bin/brain-games"],
   "description": "First project on hexlet.com",
   "type": "project",
-  "keywords": ["hexlet", ""brain-games"], 
+  "keywords": ["hexlet", "brain-games"], 
   "authors": [
     {
       "name": "Sergei Iakovlev",
       "email": "se0ga@yandex.ru"
     }
   ],
+  "scripts": {
+    "phpcs": "phpcs"
+  },
   "autoload": {
     "files": ["src/Cli.php"]
   },
   "require": {
     "php":">=7.0.0",
     "wp-cli/php-cli-tools": "^0.11.9"
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "^3.3"
   }
 }
