@@ -11,12 +11,14 @@
     }
   ],
   "scripts": {
-    "phpcs": "phpcs"
+    "phpcs": "phpcs",
+    "phpcbf": "phpcbf"
   },
   "autoload": {
     "files": [
       "src/Cli.php",
-      "src/games/runBrainEven.php"
+      "src/games/runBrainEven.php",
+      "src/games/runBrainCalc.php"
     ]
   },
   "require": {
