@@ -18,7 +18,8 @@ function runBrainEven()
         $randomNumber = rand(0, 100);
         line("Question: %s", $randomNumber);
         $answer = prompt('Your answer: ');
-        if ($answer === 'yes' && isEven($randomNumber) || $answer === 'no' && !isEven($randomNumber)) {
+	$rightAnswer = isEven($randomNumber) ? 'yes' : 'no';
+        if ($answer === $rightAnswer) {
             line("Correct!");
         } else {
             return false;
