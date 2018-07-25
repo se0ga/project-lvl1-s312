@@ -1,6 +1,6 @@
 {
   "name": "se0ga/brain-games",
-  "bin": ["bin/brain-games", "bin/brain-even"],
+  "bin": ["bin/brain-games", "bin/brain-even", "bin/brain-calc"],
   "description": "First project on hexlet.com",
   "type": "project",
   "keywords": ["hexlet", "brain-games"], 
