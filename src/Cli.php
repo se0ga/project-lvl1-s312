@@ -28,29 +28,13 @@ function run()
     askName();
 }
 
-function runGameCalc()
+function runGame($description, $getQuestion, $getRightAnswer)
 {
-    runGame('calc');
-}
-
-function runGameEven()
-{
-    runGame('even');
-}
-
-function runGameGcd()
-{
-    runGame('gcd');
-}
-
-function runGame($gameName)
-{
-    $getDescription = "\\BrainGames\\games\\{$gameName}\\getDescription";
-    $gameRun = "\\BrainGames\\games\\{$gameName}\\run";
-    welcome($getDescription());
+    welcome($description);
     $name = askName();
     for ($i = 0; $i < NUMBER_OF_TRIES; $i += 1) {
-        [$question, $rightAnswer] = $gameRun();
+        $question = $getQuestion();
+        $rightAnswer = $getRightAnswer($question);
         line("Question: %s", "{$question}");
         $answer = prompt('Your answer: ');
         

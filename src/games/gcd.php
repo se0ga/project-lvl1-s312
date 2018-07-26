@@ -1,11 +1,6 @@
 <?php
 
-namespace BrainGames\games\gcd;
-
-function getDescription()
-{
-    return 'Find the greatest common divisor of given numbers.';
-}
+namespace BrainGames\Games\Gcd;
 
 function gcd($firstNumber, $secondNumber)
 {
@@ -14,9 +9,15 @@ function gcd($firstNumber, $secondNumber)
 
 function run()
 {
-    $firstNumber = rand(1, 100);
-    $secondNumber = rand(1, 100);
-    $question = "{$firstNumber} {$secondNumber}";
-    $rightAnswer = gcd($firstNumber, $secondNumber);
-    return [$question, $rightAnswer];
+    $description = 'Find the greatest common divisor of given numbers.';
+    $getQuestion = function () {
+        $firstNumber = rand(1, 100);
+        $secondNumber = rand(1, 100);
+        return "{$firstNumber} {$secondNumber}";
+    };
+    $getRightAnswer = function ($question) {
+        $arr = explode(' ', $question);
+        return gcd((int) $arr[0], (int) $arr[1]);
+    };
+    \BrainGames\Cli\runGame($description, $getQuestion, $getRightAnswer);
 }

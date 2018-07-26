@@ -1,11 +1,6 @@
 <?php
 
-namespace BrainGames\games\even;
-
-function getDescription()
-{
-    return 'Answer "yes" if number even otherwise answer "no".';
-}
+namespace BrainGames\Games\Even;
 
 function isEven($number)
 {
@@ -14,7 +9,12 @@ function isEven($number)
 
 function run()
 {
-    $question = rand(0, 100);
-    $rightAnswer = isEven($question) ? 'yes' : 'no';
-    return [$question, $rightAnswer];
+    $description = 'Answer "yes" if number even otherwise answer "no".';
+    $getQuestion = function () {
+        return rand(0, 100);
+    };
+    $getRightAnswer = function ($question) {
+        return isEven($question) ? 'yes' : 'no';
+    };
+    \BrainGames\Cli\runGame($description, $getQuestion, $getRightAnswer);
 }
