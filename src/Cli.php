@@ -7,21 +7,6 @@ use function \cli\prompt;
 
 const NUMBER_OF_TRIES = 3;
 
-const GAMES = [
-    'even' => [
-        'description' => 'Answer "yes" if number even otherwise answer "no".',
-        'run' => '\BrainGames\games\even\run'
-    ],
-    'calc' => [
-        'description' => 'What is the result of the expression?',
-        'run' => '\BrainGames\games\calc\run'
-    ],
-    'gcd' => [
-        'description' => 'Find the greatest common divisor of given numbers.',
-        'run' => '\BrainGames\games\gcd\run'
-    ]
-];
-
 function welcome($description = '')
 {
     line('Welcome to the Brain Game!');
@@ -43,14 +28,29 @@ function run()
     askName();
 }
 
+function runGameCalc()
+{
+    runGame('calc');
+}
+
+function runGameEven()
+{
+    runGame('even');
+}
+
+function runGameGcd()
+{
+    runGame('gcd');
+}
+
 function runGame($gameName)
 {
-    $game = GAMES[$gameName];
-    welcome($game['description']);
+    $getDescription = "\\BrainGames\\games\\{$gameName}\\getDescription";
+    $gameRun = "\\BrainGames\\games\\{$gameName}\\run";
+    welcome($getDescription());
     $name = askName();
-    
     for ($i = 0; $i < NUMBER_OF_TRIES; $i += 1) {
-        [$question, $rightAnswer] = $game['run']();
+        [$question, $rightAnswer] = $gameRun();
         line("Question: %s", "{$question}");
         $answer = prompt('Your answer: ');
         

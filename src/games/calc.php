@@ -4,6 +4,11 @@ namespace BrainGames\games\calc;
 
 const OPERATIONS = ['+', '-', '*'];
 
+function getDescription()
+{
+    return 'What is the result of the expression?';
+}
+
 function calculate($firstNumber, $secondNumber, $operation)
 {
     switch ($operation) {

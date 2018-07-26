@@ -2,6 +2,11 @@
 
 namespace BrainGames\games\gcd;
 
+function getDescription()
+{
+    return 'Find the greatest common divisor of given numbers.';
+}
+
 function gcd($firstNumber, $secondNumber)
 {
     return gmp_strval(gmp_gcd($firstNumber, $secondNumber));

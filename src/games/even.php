@@ -2,6 +2,11 @@
 
 namespace BrainGames\games\even;
 
+function getDescription()
+{
+    return 'Answer "yes" if number even otherwise answer "no".';
+}
+
 function isEven($number)
 {
     return $number % 2 === 0;
