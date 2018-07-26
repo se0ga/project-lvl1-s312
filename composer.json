@@ -1,6 +1,11 @@
 {
   "name": "se0ga/brain-games",
-  "bin": ["bin/brain-games", "bin/brain-even", "bin/brain-calc"],
+  "bin": [
+    "bin/brain-games",
+    "bin/brain-even",
+    "bin/brain-calc",
+    "bin/brain-gcd"
+  ],
   "description": "First project on hexlet.com",
   "type": "project",
   "keywords": ["hexlet", "brain-games"], 
@@ -17,8 +22,9 @@
   "autoload": {
     "files": [
       "src/Cli.php",
-      "src/games/runBrainEven.php",
-      "src/games/runBrainCalc.php"
+      "src/games/even.php",
+      "src/games/calc.php",
+      "src/games/gcd.php"
     ]
   },
   "require": {

@@ -53,3 +53,17 @@ function playBrainCalc()
         line("Let's try again, %s!", $name);
     }
 }
+
+function playBrainGcd()
+{
+    welcome('Find the greatest common divisor of given numbers.');
+    $name = askName();
+
+    $result = \BrainGames\games\gcd\run();
+
+    if ($result) {
+        line("Congratulations, %s!", $name);
+    } else {
+        line("Let's try again, %s!", $name);
+    }
+}
