@@ -8,9 +8,9 @@ function getBalance($question)
     $sum = array_reduce(str_split($question), function ($acc, $number) {
         return $acc + (int) $number;
     }, 0);
-    $basicNumber = floor($summ / $length);
+    $basicNumber = floor($sum / $length);
     $arr = array_fill(0, $length, $basicNumber);
-    for ($i = $length; $i > $length - $summ % $length; $i -= 1) {
+    for ($i = $length; $i > $length - $sum % $length; $i -= 1) {
         $arr[$i-1] += 1;
     }
     return implode('', $arr);
