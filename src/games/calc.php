@@ -2,6 +2,9 @@
 
 namespace BrainGames\Games\Calc;
 
+use function \BrainGames\Game\play;
+
+const DESCRIPTION = 'What is the result of the expression?';
 const OPERATIONS = ['+', '-', '*'];
 
 function calculate($firstNumber, $secondNumber, $operation)
@@ -18,14 +21,14 @@ function calculate($firstNumber, $secondNumber, $operation)
 
 function run()
 {
-    $description = 'What is the result of the expression?';
     $getQuestionAndAnswer = function () {
         $firstNumber = rand(0, 100);
         $secondNumber = rand(0, 100);
         $operation = OPERATIONS[rand(0, 2)];
         $question = "{$firstNumber} {$operation} {$secondNumber}";
-        $answer = calculate($firstNumber, $secondNumber, $operation);
+        $result = calculate($firstNumber, $secondNumber, $operation);
+        $answer = "{$result}";
         return [$question, $answer];
     };
-    \BrainGames\Cli\runGame($description, $getQuestionAndAnswer);
+    play(DESCRIPTION, $getQuestionAndAnswer);
 }

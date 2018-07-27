@@ -2,7 +2,11 @@
 
 namespace BrainGames\Games\Balance;
 
-function getBalance($number)
+use function \BrainGames\Game\play;
+
+const DESCRIPTION = 'Balance the given number.';
+
+function getBalance(int $number)
 {
     $string = (string) $number;
     $length = strlen($string);
@@ -11,19 +15,21 @@ function getBalance($number)
     }, 0);
     $basicNumber = floor($sum / $length);
     $arr = array_fill(0, $length, $basicNumber);
-    for ($i = $length; $i > $length - $sum % $length; $i -= 1) {
-        $arr[$i-1] += 1;
+    $remainder = $sum % $length;
+    for ($i = 0; $i < $remainder; $i += 1) {
+        $index = $length - $i - 1;
+        $arr[$index] += 1;
     }
     return implode('', $arr);
 }
 
 function run()
 {
-    $description = 'Balance the given number.';
     $getQuestionAndAnswer = function () {
-        $question = rand(10, 10000);
-        $answer = getBalance($question);
+        $number = rand(10, 10000);
+        $answer = getBalance($number);
+        $question = "{$number}";
         return [$question, $answer];
     };
-    \BrainGames\Cli\runGame($description, $getQuestionAndAnswer);
+    play(DESCRIPTION, $getQuestionAndAnswer);
 }
