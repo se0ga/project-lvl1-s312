@@ -2,10 +2,11 @@
 
 namespace BrainGames\Games\Balance;
 
-function getBalance($question)
+function getBalance($number)
 {
-    $length = strlen($question);
-    $sum = array_reduce(str_split($question), function ($acc, $number) {
+    $string = (string) $number;
+    $length = strlen($string);
+    $sum = array_reduce(str_split($string), function ($acc, $number) {
         return $acc + (int) $number;
     }, 0);
     $basicNumber = floor($sum / $length);
