@@ -10,11 +10,10 @@ function isEven($number)
 function run()
 {
     $description = 'Answer "yes" if number even otherwise answer "no".';
-    $getQuestion = function () {
-        return rand(0, 100);
+    $getQuestionAndAnswer = function () {
+	$question = rand(0, 100);
+        $answer = isEven($question) ? 'yes' : 'no';
+        return [$question, $answer];
     };
-    $getRightAnswer = function ($question) {
-        return isEven($question) ? 'yes' : 'no';
-    };
-    \BrainGames\Cli\runGame($description, $getQuestion, $getRightAnswer);
+    \BrainGames\Cli\runGame($description, $getQuestionAndAnswer);
 }

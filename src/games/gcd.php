@@ -10,14 +10,12 @@ function gcd($firstNumber, $secondNumber)
 function run()
 {
     $description = 'Find the greatest common divisor of given numbers.';
-    $getQuestion = function () {
+    $getQuestionAndAnswer = function () {
         $firstNumber = rand(1, 100);
         $secondNumber = rand(1, 100);
-        return "{$firstNumber} {$secondNumber}";
+        $question = "{$firstNumber} {$secondNumber}";
+        $answer = gcd($firstNumber, $secondNumber);
+        return [$question, $answer];
     };
-    $getRightAnswer = function ($question) {
-        $arr = explode(' ', $question);
-        return gcd((int) $arr[0], (int) $arr[1]);
-    };
-    \BrainGames\Cli\runGame($description, $getQuestion, $getRightAnswer);
+    \BrainGames\Cli\runGame($description, $getQuestionAndAnswer);
 }

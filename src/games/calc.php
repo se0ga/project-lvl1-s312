@@ -19,15 +19,13 @@ function calculate($firstNumber, $secondNumber, $operation)
 function run()
 {
     $description = 'What is the result of the expression?';
-    $getQuestion = function () {
+    $getQuestionAndAnswer = function () {
         $firstNumber = rand(0, 100);
         $secondNumber = rand(0, 100);
         $operation = OPERATIONS[rand(0, 2)];
-        return "{$firstNumber} {$operation} {$secondNumber}";
+        $question = "{$firstNumber} {$operation} {$secondNumber}";
+        $answer = calculate($firstNumber, $secondNumber, $operation);
+        return [$question, $answer];
     };
-    $getRightAnswer = function ($question) {
-        $arr = explode(' ', $question);
-        return calculate((int) $arr[0], (int) $arr[2], $arr[1]);
-    };
-    \BrainGames\Cli\runGame($description, $getQuestion, $getRightAnswer);
+    \BrainGames\Cli\runGame($description, $getQuestionAndAnswer);
 }

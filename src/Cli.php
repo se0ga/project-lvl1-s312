@@ -24,17 +24,17 @@ function askName()
 
 function run()
 {
-    welcome();
-    askName();
+    line('Welcome to the Brain Game!');
+    $name = prompt('May I have your name?');
+    line("Hello, %s!", $name);
 }
 
-function runGame($description, $getQuestion, $getRightAnswer)
+function runGame($description, $getQuestionAndAnswer)
 {
     welcome($description);
     $name = askName();
     for ($i = 0; $i < NUMBER_OF_TRIES; $i += 1) {
-        $question = $getQuestion();
-        $rightAnswer = $getRightAnswer($question);
+        [$question, $rightAnswer] = $getQuestionAndAnswer();
         line("Question: %s", "{$question}");
         $answer = prompt('Your answer: ');
         

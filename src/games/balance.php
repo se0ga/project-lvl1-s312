@@ -19,12 +19,10 @@ function getBalance($question)
 function run()
 {
     $description = 'Balance the given number.';
-    $getQuestion = function () {
-        $number = rand(10, 10000);
-        return "{$number}";
+    $getQuestionAndAnswer = function () {
+        $question = rand(10, 10000);
+        $answer = getBalance($question);
+        return [$question, $answer];
     };
-    $getRightAnswer = function ($question) {
-        return getBalance($question);
-    };
-    \BrainGames\Cli\runGame($description, $getQuestion, $getRightAnswer);
+    \BrainGames\Cli\runGame($description, $getQuestionAndAnswer);
 }
