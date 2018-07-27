@@ -11,7 +11,7 @@ function run()
 {
     $description = 'Answer "yes" if number even otherwise answer "no".';
     $getQuestionAndAnswer = function () {
-	$question = rand(0, 100);
+        $question = rand(0, 100);
         $answer = isEven($question) ? 'yes' : 'no';
         return [$question, $answer];
     };
