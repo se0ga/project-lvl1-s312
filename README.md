@@ -11,28 +11,56 @@ composer global require se0ga/brain-games (add composer in PATH)
 ### Launch
 #### brain-games
 This command will ask your name and say hello.
-<details><summary>How it works</summary>![demo](Screenshots/brain-games.gif)</details>
+<details><summary>How it works</summary>
+  
+  ![demo](Screenshots/brain-games.gif)
+  
+</details>
 
 #### brain-even
 This command will check that you know which number is even and which is not.
-<details><summary>How it works</summary>![demo](Screenshots/brain-even.gif)</details>
+<details><summary>How it works</summary>
+  
+  ![demo](Screenshots/brain-even.gif)
+  
+</details>
 
 #### brain-calc
 This command will check that you remember how to make those operations +, -, * .
-<details><summary>How it works</summary>![demo](Screenshots/brain-calc.gif)</details>
+<details><summary>How it works</summary>
+  
+  ![demo](Screenshots/brain-calc.gif)
+  
+</details>
 
 #### brain-gcd
 This command will check that you remember how to find greatest common divisor.
-<details><summary>How it works</summary>![demo](Screenshots/brain-gcd.gif)</details>
+<details><summary>How it works</summary>
+  
+  ![demo](Screenshots/brain-gcd.gif)
+  
+</details>
 
 #### brain-balance
 This command will check that you know how to balance number.
-<details><summary>How it works</summary>![demo](Screenshots/brain-balance.gif)</details>
+<details><summary>How it works</summary>
+  
+  ![demo](Screenshots/brain-balance.gif)
+
+</details>
 
 #### brain-progression
 This command will check that you know how to find missed number in arithmetic progression.
-<details><summary>How it works</summary>![demo](Screenshots/brain-progression.gif)</details>
+<details><summary>How it works</summary>
+  
+  ![demo](Screenshots/brain-progression.gif)
+
+</details>
 
 #### brain-prime
 This command will check that you know which number is prime and which is not.
-<details><summary>How it works</summary>![demo](Screenshots/brain-prime.gif)</details>
+<details><summary>How it works</summary>
+  
+  ![demo](Screenshots/brain-prime.gif)
+
+</details>
