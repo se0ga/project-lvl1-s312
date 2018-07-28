@@ -6,10 +6,14 @@
 # Project Brain Games
 ## Getting Started
 ### Install
-composer global require se0ga/brain-games (add composer in PATH)
+```bash
+$ composer global require se0ga/brain-games
+```
 
 ### Launch
-#### brain-games
+```bash
+$ brain-games
+```
 This command will ask your name and say hello.
 <details><summary>How it works</summary>
   
@@ -17,7 +21,9 @@ This command will ask your name and say hello.
   
 </details>
 
-#### brain-even
+```bash
+$ brain-even
+```
 This command will check that you know which number is even and which is not.
 <details><summary>How it works</summary>
   
@@ -25,7 +31,9 @@ This command will check that you know which number is even and which is not.
   
 </details>
 
-#### brain-calc
+```bash
+$ brain-calc
+```
 This command will check that you remember how to make those operations +, -, * .
 <details><summary>How it works</summary>
   
@@ -33,7 +41,9 @@ This command will check that you remember how to make those operations +, -, * .
   
 </details>
 
-#### brain-gcd
+```bash
+$ brain-gcd
+```
 This command will check that you remember how to find greatest common divisor.
 <details><summary>How it works</summary>
   
@@ -41,7 +51,9 @@ This command will check that you remember how to find greatest common divisor.
   
 </details>
 
-#### brain-balance
+```bash
+$ brain-balance
+```
 This command will check that you know how to balance number.
 <details><summary>How it works</summary>
   
@@ -49,7 +61,9 @@ This command will check that you know how to balance number.
 
 </details>
 
-#### brain-progression
+```bash
+$ brain-progression
+```
 This command will check that you know how to find missed number in arithmetic progression.
 <details><summary>How it works</summary>
   
@@ -57,7 +71,9 @@ This command will check that you know how to find missed number in arithmetic pr
 
 </details>
 
-#### brain-prime
+```bash
+$ brain-prime
+```
 This command will check that you know which number is prime and which is not.
 <details><summary>How it works</summary>
   
