@@ -11,7 +11,7 @@ $ composer global require se0ga/brain-games
 ```
 
 ### Launch
-- This command will ask your name and say hello.
+1. This command will ask your name and say hello.
 ```bash
 $ brain-games
 ```
@@ -20,8 +20,8 @@ $ brain-games
   ![demo](Screenshots/brain-games.gif)
   
 </details>
-
-- This command will check that you know which number is even and which is not.
+ 
+2. This command will check that you know which number is even and which is not.
 ```bash
 $ brain-even
 ```
@@ -30,8 +30,8 @@ $ brain-even
   ![demo](Screenshots/brain-even.gif)
   
 </details>
-
-- This command will check that you remember how to make those operations +, -, * .
+ 
+3. This command will check that you remember how to make those operations +, -, * .
 ```bash
 $ brain-calc
 ```
@@ -40,8 +40,8 @@ $ brain-calc
   ![demo](Screenshots/brain-calc.gif)
   
 </details>
-
-- This command will check that you remember how to find greatest common divisor.
+ 
+4. This command will check that you remember how to find greatest common divisor.
 ```bash
 $ brain-gcd
 ```
@@ -50,8 +50,8 @@ $ brain-gcd
   ![demo](Screenshots/brain-gcd.gif)
   
 </details>
-
-- This command will check that you know how to balance number.
+ 
+5. This command will check that you know how to balance number.
 ```bash
 $ brain-balance
 ```
@@ -60,8 +60,8 @@ $ brain-balance
   ![demo](Screenshots/brain-balance.gif)
 
 </details>
-
-- This command will check that you know how to find missed number in arithmetic progression.
+  
+6. This command will check that you know how to find missed number in arithmetic progression.
 ```bash
 $ brain-progression
 ```
@@ -70,8 +70,8 @@ $ brain-progression
   ![demo](Screenshots/brain-progression.gif)
 
 </details>
-
-- This command will check that you know which number is prime and which is not.
+ 
+7. This command will check that you know which number is prime and which is not.
 ```bash
 $ brain-prime
 ```
