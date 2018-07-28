@@ -5,6 +5,8 @@ namespace BrainGames\Games\Balance;
 use function \BrainGames\Game\play;
 
 const DESCRIPTION = 'Balance the given number.';
+const QUESTION_MIN_VALUE = 10;
+const QUESTION_MAX_VALUE = 10000;
 
 function getBalance(int $number)
 {
@@ -26,7 +28,7 @@ function getBalance(int $number)
 function run()
 {
     $getQuestionAndAnswer = function () {
-        $number = rand(10, 10000);
+        $number = rand(QUESTION_MIN_VALUE, QUESTION_MAX_VALUE);
         $answer = getBalance($number);
         $question = "{$number}";
         return [$question, $answer];

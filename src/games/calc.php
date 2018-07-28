@@ -6,6 +6,8 @@ use function \BrainGames\Game\play;
 
 const DESCRIPTION = 'What is the result of the expression?';
 const OPERATIONS = ['+', '-', '*'];
+const QUESTION_MIN_VALUE = 0;
+const QUESTION_MAX_VALUE = 100;
 
 function calculate($firstNumber, $secondNumber, $operation)
 {
@@ -22,9 +24,10 @@ function calculate($firstNumber, $secondNumber, $operation)
 function run()
 {
     $getQuestionAndAnswer = function () {
-        $firstNumber = rand(0, 100);
-        $secondNumber = rand(0, 100);
-        $operation = OPERATIONS[rand(0, 2)];
+        $firstNumber = rand(QUESTION_MIN_VALUE, QUESTION_MAX_VALUE);
+        $secondNumber = rand(QUESTION_MIN_VALUE, QUESTION_MAX_VALUE);
+        $index = rand(0, sizeof(OPERATIONS) - 1);
+        $operation = OPERATIONS[$index];
         $question = "{$firstNumber} {$operation} {$secondNumber}";
         $result = calculate($firstNumber, $secondNumber, $operation);
         $answer = "{$result}";
