@@ -11,7 +11,7 @@ $ composer global require se0ga/brain-games
 ```
 
 ### Launch
-This command will ask your name and say hello.
+- This command will ask your name and say hello.
 ```bash
 $ brain-games
 ```
@@ -21,7 +21,7 @@ $ brain-games
   
 </details>
 
-This command will check that you know which number is even and which is not.
+- This command will check that you know which number is even and which is not.
 ```bash
 $ brain-even
 ```
@@ -31,7 +31,7 @@ $ brain-even
   
 </details>
 
-This command will check that you remember how to make those operations +, -, * .
+- This command will check that you remember how to make those operations +, -, * .
 ```bash
 $ brain-calc
 ```
@@ -41,7 +41,7 @@ $ brain-calc
   
 </details>
 
-This command will check that you remember how to find greatest common divisor.
+- This command will check that you remember how to find greatest common divisor.
 ```bash
 $ brain-gcd
 ```
@@ -51,7 +51,7 @@ $ brain-gcd
   
 </details>
 
-This command will check that you know how to balance number.
+- This command will check that you know how to balance number.
 ```bash
 $ brain-balance
 ```
@@ -61,7 +61,7 @@ $ brain-balance
 
 </details>
 
-This command will check that you know how to find missed number in arithmetic progression.
+- This command will check that you know how to find missed number in arithmetic progression.
 ```bash
 $ brain-progression
 ```
@@ -71,7 +71,7 @@ $ brain-progression
 
 </details>
 
-This command will check that you know which number is prime and which is not.
+- This command will check that you know which number is prime and which is not.
 ```bash
 $ brain-prime
 ```
