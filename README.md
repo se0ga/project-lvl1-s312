@@ -3,7 +3,7 @@
 [![Issue Count](https://codeclimate.com/github/se0ga/project-lvl1-s312/badges/issue_count.svg)](https://codeclimate.com/github/se0ga/project-lvl1-s312)
 [![Test Coverage](https://codeclimate.com/github/se0ga/project-lvl1-s312/badges/coverage.svg)](https://codeclimate.com/github/se0ga/project-lvl1-s312/coverage)
 
-# Project Brain Games
+# Project Brain Games on PHP
 ## Getting Started
 ### Install
 ```bash
